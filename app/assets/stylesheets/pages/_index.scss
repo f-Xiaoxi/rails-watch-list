@@ -1,2 +1,115 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.bannerimage {
+  background-image: url(https://image.benq.com/is/image/benqco/heaven-for-movie-buffs-cinema-paradiso-and-your-projector-01);
+  height: 250px;
+  object-fit: fill;
+  object-position: center;
+
+}
+
+.list-container {
+  margin:auto;
+  margin-top: 20px;
+  width: 70vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  justify-content: center;
+}
+
+p {
+  font-size: 10px;
+  margin: 0px;
+}
+
+.card-content {
+  height: 80px;
+  padding: 10px;
+}
+
+.card-title {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card-text {
+  opacity: .5;
+}
+
+.rating {
+  opacity: .5;
+}
+
+.card-bottom {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 2em;
+  margin: 0px;
+  padding: 10px;
+
+}
+
+.card-bottom > a {
+  text-align: right;
+  color: red;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.star {
+  color: orange;
+}
+
+.max-lines {
+  display: block;/* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em;
+  line-height: 1.8em;
+}
+
+.list {
+  margin:auto;
+  margin-top: 20px;
+  width: 70vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2em;
+  justify-content: center;
+}
+
+/*Filter styles*/
+.saturate { filter: saturate(3); }
+.grayscale { filter: grayscale(100%); }
+.contrast { filter: contrast(160%); }
+.brightness { filter: brightness(0.25); }
+.blur { filter: blur(3px); }
+.invert { filter: invert(100%); }
+.sepia { filter: sepia(100%); }
+.huerotate { filter: hue-rotate(180deg); }
+.rss.opacity { filter: opacity(50%); }
+
+.list-title > a {
+  text-decoration: none;
+  color: white;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.image {
+  object-fit: fill;
+}
+
+.add-list {
+  text-align: right;
+}
+
+.add-list > a {
+  font-size: 13px;
+  color: white;
+}

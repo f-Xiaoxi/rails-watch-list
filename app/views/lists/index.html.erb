@@ -1,0 +1,32 @@
+<ul class="nav justify-content-center mb-3">
+  <div class="nav-item">
+    <%= link_to "My lists", lists_path, :class => "nav-link active" %>
+  </div>
+  <div class="nav-item">
+    <%= link_to "New list", new_list_path(@list), :class => "nav-link active" %>
+  </div>
+</ul>
+
+<div class="position-relative overflow-hidden p-md-5 text-center bg-light bannerimage grayscale image">
+    <div class="col-md-5 p-lg-12 mx-auto my-5">
+      <h3>Save any kinds of movies</h3>
+    </div>
+  </div>
+
+
+<div class="list">
+    <h3>My lists</h3>
+    <div> </div>
+    <div class="add-list"> <%= link_to "Create a movie list", new_list_path(@list), :class => "btn btn-success" %></div>
+  </div>
+
+<div class="list">
+ <% @lists.each do |list| %>
+<div class="card">
+  <img class="card-img grayscale image" src="<%= list.url %>">
+  <div class="card-img-overlay d-flex">
+    <h5 class="align-self-center mx-auto list-title"><%= link_to list.name, list_path(list) %></h5>
+  </div>
+</div>
+    <% end %>
+</div>

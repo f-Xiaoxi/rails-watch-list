@@ -1,0 +1,15 @@
+<ul class="nav justify-content-center mb-3">
+  <div class="nav-item">
+    <%= link_to "My lists", lists_path, :class => "nav-link active" %>
+  </div>
+  <div class="nav-item">
+    <%= link_to "New list", new_list_path(@list), :class => "nav-link active" %>
+  </div>
+</ul>
+
+<h1>Add movie</h1>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.submit "Submit list", class: "btn btn-primary" %>
+<% end %>
