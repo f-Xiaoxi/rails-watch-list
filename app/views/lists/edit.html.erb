@@ -1,2 +1,7 @@
-<h1>Lists#edit</h1>
-<p>Find me in app/views/lists/edit.html.erb</p>
+<div class="col m-3 text-center" >
+<h1>Add list</h1>
+<%= simple_form_for(@list) do |f| %>
+  <%= f.input :name %>
+   <%= f.input :photo, as: :file %>
+  <%= f.submit "Submit list", class: "btn btn-primary" %>
+<% end %>

@@ -16,13 +16,20 @@ class ListsController < ApplicationController
   def create
     list = List.new(list_create_params)
     if list.save
-      redirect_to lists_path(@lists)
+      redirect_to list_path(list)
     else
       render json: ErrorSerializer.serialize(user.errors), status: :unprocessable_entity
     end
   end
 
   def edit
+    @list = List.find(params[:id])
+  end
+
+  def update
+    @list = List.find(params[:id])
+    @list.update(list_create_params)
+    @list.save
   end
 
   def destroy
@@ -34,6 +41,6 @@ class ListsController < ApplicationController
   private
 
   def list_create_params
-    params.require(:list).permit(:name, :url)
+    params.require(:list).permit(:name, :body, :photo)
   end
 end

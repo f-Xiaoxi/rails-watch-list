@@ -23,7 +23,9 @@
 <div class="list">
  <% @lists.each do |list| %>
 <div class="card">
-  <img class="card-img grayscale image" src="<%= list.url %>">
+  <div class="grayscale">
+  <%= cl_image_tag list.photo.key, height: 150, width: 220, crop: :fill %>
+  </div>
   <div class="card-img-overlay d-flex">
     <h5 class="align-self-center mx-auto list-title"><%= link_to list.name, list_path(list) %></h5>
   </div>
