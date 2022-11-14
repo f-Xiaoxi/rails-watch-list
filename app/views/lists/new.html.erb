@@ -2,5 +2,6 @@
 <h1>Add list</h1>
 <%= simple_form_for(@list) do |f| %>
   <%= f.input :name %>
+  <%= f.input :url %>
   <%= f.submit "Submit list", class: "btn btn-primary" %>
 <% end %>
