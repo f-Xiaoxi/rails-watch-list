@@ -14,7 +14,8 @@
 <div class="list">
     <h3>My bookmarks</h3>
     <div> </div>
-    <div class="add-list"> <%= link_to "Add a movie", new_list_bookmark_path(@list, @bookmark), :class => "btn btn-success" %></div>
+    <div class="add-list"> <%= link_to "Add a movie", new_list_bookmark_path(@list, @bookmark), :class => "btn btn-success" %>
+     <%= link_to "Delete list", list_path(@list), :class => "btn btn-success", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></div>
   </div>
 
 <div class="list-container">
